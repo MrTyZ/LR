@@ -11,7 +11,7 @@ public class ListenerButton implements ActionListener {
 			
 		
 		
-		System.exit(1);
+		//System.exit(1);
 		
 	}
 
