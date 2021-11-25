@@ -37,6 +37,12 @@ public class subversion {
 	button_info.addActionListener(info_listener);
 	main_panel.add(button_info);
 	
+	JButton button_calc = new JButton("Информация");
+	button_info.setBounds(30,200,150,40);
+	//ActionListener info_listener = new info_button();
+	//button_info.addActionListener(info_listener);
+	main_panel.add(button_calc);
+	
 	//Image logo = new Image(); //загрузка картинки
 	//logo.setSize(180, 100);
 	//logo.setLocation(200, 0);
@@ -63,7 +69,7 @@ public class subversion {
 	ActionListener logo_transfer = new transfer_logo();
 	combo_student.addActionListener(logo_transfer);
 	
-	//main_panel.add(combo_student);
+	main_panel.add(combo_student);
 	
 	
 	
