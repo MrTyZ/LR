@@ -59,11 +59,11 @@ public class subversion {
 	
 	String[] transfer = {"Переместить логотип УГАТУ в верхний правый угол", "Переместить логотип УГАТУ в середину", "Переместить логотип УГАТУ в левый верхний угол"};
 	combo_student = new JComboBox(transfer);
-	//combo_student.setBounds(30,140,350,30);
+	combo_student.setBounds(30,140,350,30);
 	ActionListener logo_transfer = new transfer_logo();
 	combo_student.addActionListener(logo_transfer);
 	
-	main_panel.add(combo_student);
+	//main_panel.add(combo_student);
 	
 	
 	
