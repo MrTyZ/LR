@@ -1,6 +1,8 @@
 package Laba2; //пакет Java классов
 
 import java.awt.event.ActionListener; //библиотека для события слушателя
+import java.util.jar.JarInputStream;
+
 import javax.swing.*; // Библиотека для GUI (построена на основе awt)
 
 public class subversion {
@@ -13,8 +15,8 @@ public class subversion {
 	public subversion() {
 	main_GUI = new JFrame("subversion");	// создание графического окна
 	main_GUI.setTitle ("Using subversion for developers");
-	main_GUI.setBounds(500,400,420,320);
-	main_GUI.setResizable(false); // фиксированный размер окна
+	main_GUI.setBounds(500,400,280,460);
+	//main_GUI.setResizable(false); // фиксированный размер окна
 	
 	
 	main_panel = new JPanel(); // Панель - используется для организации компонентов в окне
@@ -22,31 +24,34 @@ public class subversion {
 	main_GUI.add(main_panel);
 	
 	JLabel laba_info = new JLabel("Лабораторная работа №2"); // Отображение текста или изображения
-	laba_info.setBounds(120,100,150,30);
+	laba_info.setBounds(20,5,80,30);
 	main_panel.add(laba_info);
 	
+	JLabel label_result = new JLabel("Результат");
+	label_result.setBounds(100,120,300,30);
+	main_panel.add(label_result);
+	
 	JButton button_exit = new JButton("Выход"); // добавляем кнопку
-	button_exit.setBounds(270,200,100,40);
+	button_exit.setBounds(155,360,120,40);
 	ActionListener actionListener = new ListenerButton(); //создаем слушатель
 	button_exit.addActionListener(actionListener); // добавляем слушатель к кнопке
 	main_panel.add(button_exit);
 	
 	JButton button_info = new JButton("Информация");
-	button_info.setBounds(30,200,150,40);
+	button_info.setBounds(5,360,120,40);
 	ActionListener info_listener = new info_button();
 	button_info.addActionListener(info_listener);
 	main_panel.add(button_info);
 	
-	JButton button_calc = new JButton("Информация");
-	button_info.setBounds(30,200,150,40);
-	//ActionListener info_listener = new info_button();
-	//button_info.addActionListener(info_listener);
-	//main_panel.add(button_calc);
+	JButton button_calc = new JButton("Расчет");
+	button_calc.setBounds(75,70,150,40);
+	ActionListener calculation_listener = new calculation();
+	button_calc.addActionListener(calculation_listener);
+	main_panel.add(button_calc);
 	
-	//Image logo = new Image(); //загрузка картинки
-	//logo.setSize(180, 100);
-	//logo.setLocation(200, 0);
-	//main_panel.add(logo);
+	JTextField input_text = new JTextField("Введите");
+	input_text.setBounds(100, 20, 100, 40);
+	main_panel.add(input_text);
 	
 	JMenu menu = new JMenu("Главная");
 	JMenuBar menuBar = new JMenuBar();
@@ -63,15 +68,7 @@ public class subversion {
 	menuBar.add(menu);
 	main_GUI.setJMenuBar(menuBar);
 	
-	String[] transfer = {"Переместить логотип УГАТУ в верхний правый угол", "Переместить логотип УГАТУ в середину", "Переместить логотип УГАТУ в левый верхний угол"};
-	combo_student = new JComboBox(transfer);
-	combo_student.setBounds(30,140,350,30);
-	ActionListener logo_transfer = new transfer_logo();
-	combo_student.addActionListener(logo_transfer);
-	
-	main_panel.add(combo_student);
-	
-	
+
 	
 	main_GUI.setVisible(true);
 	
