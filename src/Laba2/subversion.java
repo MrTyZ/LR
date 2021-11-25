@@ -41,7 +41,7 @@ public class subversion {
 	button_info.setBounds(30,200,150,40);
 	//ActionListener info_listener = new info_button();
 	//button_info.addActionListener(info_listener);
-	main_panel.add(button_calc);
+	//main_panel.add(button_calc);
 	
 	//Image logo = new Image(); //загрузка картинки
 	//logo.setSize(180, 100);
