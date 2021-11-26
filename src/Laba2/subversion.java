@@ -10,13 +10,12 @@ public class subversion {
 	protected  JFrame main_GUI;
 	protected  JPanel main_panel;
 	protected static  subversion student;
-	protected static JComboBox combo_student;
 	protected static JTextField input_text;
 	protected static JLabel label_result;
 		
 	public subversion() {
 	main_GUI = new JFrame("subversion");	// создание графического окна
-	main_GUI.setTitle ("Using subversion for developers");
+	main_GUI.setTitle ("Calculation");
 	main_GUI.setBounds(500,400,280,460);
 	main_GUI.setResizable(false); // фиксированный размер окна
 	
@@ -47,8 +46,8 @@ public class subversion {
 	
 	JButton button_calc = new JButton("Расчет");
 	button_calc.setBounds(65,120,150,40);
-	//ActionListener calculation_listener = new calculation();
-	//button_calc.addActionListener(calculation_listener);
+	ActionListener calculation_listener = new calculation();
+	button_calc.addActionListener(calculation_listener);
 	main_panel.add(button_calc);
 	
 	input_text = new JTextField("Введите кол-во энергии");
@@ -57,12 +56,11 @@ public class subversion {
 	
 	JMenu menu = new JMenu("Главная");
 	JMenuBar menuBar = new JMenuBar();
-	JMenuItem menu1= new JMenuItem("Отобразить логотип УГАТУ");
+	JMenuItem menu1= new JMenuItem("Информация");
 	JMenuItem menu2= new JMenuItem("Выход");
 	
 	menu2.addActionListener(actionListener);
-	ActionListener logo_image = new ListenerLogo();
-	menu1.addActionListener(logo_image);
+	menu1.addActionListener(info_listener);
 	
 	
 	menu.add(menu1);
