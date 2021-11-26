@@ -11,12 +11,14 @@ public class subversion {
 	protected  JPanel main_panel;
 	protected static  subversion student;
 	protected static JComboBox combo_student;
+	protected static JTextField input_text;
+	protected static JLabel label_result;
 		
 	public subversion() {
 	main_GUI = new JFrame("subversion");	// создание графического окна
 	main_GUI.setTitle ("Using subversion for developers");
 	main_GUI.setBounds(500,400,280,460);
-	//main_GUI.setResizable(false); // фиксированный размер окна
+	main_GUI.setResizable(false); // фиксированный размер окна
 	
 	
 	main_panel = new JPanel(); // Панель - используется для организации компонентов в окне
@@ -24,11 +26,11 @@ public class subversion {
 	main_GUI.add(main_panel);
 	
 	JLabel laba_info = new JLabel("Лабораторная работа №2"); // Отображение текста или изображения
-	laba_info.setBounds(20,5,80,30);
+	laba_info.setBounds(20,5,240,30);
 	main_panel.add(laba_info);
 	
-	JLabel label_result = new JLabel("Результат");
-	label_result.setBounds(100,120,300,30);
+	label_result = new JLabel("Результат");
+	label_result.setBounds(100,170,300,30);
 	main_panel.add(label_result);
 	
 	JButton button_exit = new JButton("Выход"); // добавляем кнопку
@@ -44,13 +46,13 @@ public class subversion {
 	main_panel.add(button_info);
 	
 	JButton button_calc = new JButton("Расчет");
-	button_calc.setBounds(75,70,150,40);
-	ActionListener calculation_listener = new calculation();
-	button_calc.addActionListener(calculation_listener);
+	button_calc.setBounds(65,120,150,40);
+	//ActionListener calculation_listener = new calculation();
+	//button_calc.addActionListener(calculation_listener);
 	main_panel.add(button_calc);
 	
-	JTextField input_text = new JTextField("Введите");
-	input_text.setBounds(100, 20, 100, 40);
+	input_text = new JTextField("Введите кол-во энергии");
+	input_text.setBounds(65, 70, 150, 40);
 	main_panel.add(input_text);
 	
 	JMenu menu = new JMenu("Главная");
