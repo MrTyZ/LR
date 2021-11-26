@@ -1,7 +1,6 @@
 package Laba2; //пакет Java классов
 
 import java.awt.event.ActionListener; //библиотека для события слушателя
-import java.util.jar.JarInputStream;
 
 import javax.swing.*; // Библиотека для GUI (построена на основе awt)
 
