@@ -1,26 +1,24 @@
 package Laba2;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 
-public class calculation implements ActionListener  {
+
+public abstract class calculation  {
 	
-	@Override
-	public void actionPerformed(ActionEvent a) {
+	float s1,s2,tar1,tar2,result;
+	String text1,text2;
+	
+	public void calculate(String text1,String text2,float s1,float s2,float tar1,float tar2,float result) 
+	{
 		
-		try {
-			String text= subversion.input_text.getText();
-			float s = Float.parseFloat(text);
-			float result = 2.22f * s;
-			subversion.label_result.setText("Результат: " + Float.toString(result));
-		} catch (NumberFormatException e) {
+			s1 = Float.parseFloat(text1);
+			s2 = Float.parseFloat(text2);
+			result = s1*tar1+ s2*tar2;		
+			subversion.label_result.setText("Результат: " + Double.toString(result));
 			
-			subversion.label_result.setText("Ошибка ввода");
-			e.printStackTrace();
-		}
-		
 	}
+}	
+	
 
-}
+
 
