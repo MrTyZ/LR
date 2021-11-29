@@ -9,8 +9,10 @@ public class subversion {
 	protected  JFrame main_GUI;
 	protected  JPanel main_panel;
 	protected static  subversion student;
-	protected static JTextField input_text;
+	protected static JTextField input_text1;
+	protected static JTextField input_text2;
 	protected static JLabel label_result;
+	protected static JComboBox combo_selector;
 		
 	public subversion() {
 	main_GUI = new JFrame("subversion");	// создание графического окна
@@ -28,7 +30,7 @@ public class subversion {
 	main_panel.add(laba_info);
 	
 	label_result = new JLabel("Результат");
-	label_result.setBounds(100,170,300,30);
+	label_result.setBounds(100,320,300,30);
 	main_panel.add(label_result);
 	
 	JButton button_exit = new JButton("Выход"); // добавляем кнопку
@@ -44,19 +46,29 @@ public class subversion {
 	main_panel.add(button_info);
 	
 	JButton button_calc = new JButton("Расчет");
-	button_calc.setBounds(65,120,150,40);
-	ActionListener calculation_listener = new calculation();
-	button_calc.addActionListener(calculation_listener);
+	button_calc.setBounds(65,270,150,40);
+	ActionListener calc_listener = new listener_calc();
+	button_info.addActionListener(calc_listener);
 	main_panel.add(button_calc);
 	
-	input_text = new JTextField("Введите кол-во энергии");
-	input_text.setBounds(65, 70, 150, 40);
-	main_panel.add(input_text);
+	input_text1 = new JTextField("");
+	input_text1.setBounds(75, 160, 130, 40);
+	main_panel.add(input_text1);
+	
+	input_text2 = new JTextField("");
+	input_text2.setBounds(75, 220, 130, 40);
 	
 	JMenu menu = new JMenu("Главная");
 	JMenuBar menuBar = new JMenuBar();
 	JMenuItem menu1= new JMenuItem("Информация");
 	JMenuItem menu2= new JMenuItem("Выход");
+	
+	String[] selector = {"Городской населенный пункт, одноставочный тариф", "Городской населенный пункт, дифференцированный тариф", "Сельское население, одноставочный тариф", "Сельское население, дифференцированный тариф"};
+	combo_selector = new JComboBox(selector);
+	combo_selector.setBounds(5,35,270,30);
+	ActionListener selector_type = new type_selector();
+	combo_selector.addActionListener(selector_type);	
+	main_panel.add(combo_selector);
 	
 	menu2.addActionListener(actionListener);
 	menu1.addActionListener(info_listener);
