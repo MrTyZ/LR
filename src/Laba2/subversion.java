@@ -13,6 +13,8 @@ public class subversion {
 	protected static JTextField input_text2;
 	protected static JLabel label_result;
 	protected static JComboBox combo_selector;
+	protected static JLabel text2_label;
+	protected static JLabel text1_label;
 		
 	public subversion() {
 	main_GUI = new JFrame("subversion");	// создание графического окна
@@ -51,9 +53,14 @@ public class subversion {
 	button_info.addActionListener(calc_listener);
 	main_panel.add(button_calc);
 	
+	text1_label = new JLabel("Введите кол-во кВТ:"); 
+	text1_label.setBounds(20,140,250,20);
+	
 	input_text1 = new JTextField("");
 	input_text1.setBounds(75, 160, 130, 40);
-	main_panel.add(input_text1);
+	
+	text2_label = new JLabel("Введите кол-во кВТ за ночь:");
+	text2_label.setBounds(20,200,250,20);
 	
 	input_text2 = new JTextField("");
 	input_text2.setBounds(75, 220, 130, 40);
@@ -63,7 +70,7 @@ public class subversion {
 	JMenuItem menu1= new JMenuItem("Информация");
 	JMenuItem menu2= new JMenuItem("Выход");
 	
-	String[] selector = {"Городской населенный пункт, одноставочный тариф", "Городской населенный пункт, дифференцированный тариф", "Сельское население, одноставочный тариф", "Сельское население, дифференцированный тариф"};
+	String[] selector = {"","Городской населенный пункт, одноставочный тариф", "Городской населенный пункт, дифференцированный тариф", "Сельское население, одноставочный тариф", "Сельское население, дифференцированный тариф"};
 	combo_selector = new JComboBox(selector);
 	combo_selector.setBounds(5,35,270,30);
 	ActionListener selector_type = new type_selector();
