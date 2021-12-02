@@ -50,7 +50,7 @@ public class subversion {
 	JButton button_calc = new JButton("Расчет");
 	button_calc.setBounds(65,270,150,40);
 	ActionListener calc_listener = new listener_calc();
-	button_info.addActionListener(calc_listener);
+	button_calc.addActionListener(calc_listener);
 	main_panel.add(button_calc);
 	
 	text1_label = new JLabel("Введите кол-во кВТ:"); 
