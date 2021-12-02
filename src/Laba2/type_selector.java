@@ -16,39 +16,58 @@ public class type_selector extends calculation implements ActionListener{
 		
 		case "Городской населенный пункт, одноставочный тариф":
 		{
-			tar1 = 3.33f; tar2 = 0; 
+			calc.tar1 = 3.33f; calc.tar2 = 0; 
 			subversion.student.main_panel.remove(subversion.input_text2);
+			subversion.student.main_panel.remove(subversion.text2_label);
+			subversion.student.main_panel.add(subversion.input_text1);
+			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.repaint();
 			
 		}
 		break;
 		case "Городской населенный пункт, дифференцированный тариф":
 		{
-			tar1 = 3.83f; tar2 = 2.66f; 
+			calc.tar1 = 3.83f; calc.tar2 = 2.66f; 
+			subversion.student.main_panel.add(subversion.input_text1);
+			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.add(subversion.input_text2);
+			subversion.student.main_panel.add(subversion.text2_label);
 			subversion.student.main_panel.repaint();
 			
 		}
 		break;
 		case "Сельское население, одноставочный тариф":
 		{
-			tar1 = 2.33f; tar2 = 0;
+			calc.tar1 = 2.33f; calc.tar2 = 0;
 			subversion.student.main_panel.remove(subversion.input_text2);
+			subversion.student.main_panel.remove(subversion.text2_label);
+			subversion.student.main_panel.add(subversion.input_text1);
+			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.repaint();
 			
 		}
 		break;
 		case "Сельское население, дифференцированный тариф":
 		{
-			tar1 = 2.68f; tar2 = 1.86f;
+			calc.tar1 = 2.68f; calc.tar2 = 1.86f;
+			subversion.student.main_panel.add(subversion.input_text1);
+			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.add(subversion.input_text2);
+			subversion.student.main_panel.add(subversion.text2_label);
 			subversion.student.main_panel.repaint();
 			
 		}
 		break;
 		
+		default:{
+			subversion.student.main_panel.remove(subversion.input_text1);
+			subversion.student.main_panel.remove(subversion.text1_label);
+			subversion.student.main_panel.remove(subversion.input_text2);
+			subversion.student.main_panel.remove(subversion.text2_label);
+			subversion.student.main_panel.repaint();
 		}
-
+		}
+		
 		
 		
 
