@@ -12,7 +12,6 @@ public class listener_calc implements ActionListener  {
 			new calc(subversion.input_text1.getText(),calc.tar1);}
 		else {
 			new calc(subversion.input_text1.getText(),subversion.input_text2.getText(),calc.tar1,calc.tar2);
-			System.out.println(2);
 		}
 
 	
