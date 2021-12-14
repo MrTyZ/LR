@@ -11,12 +11,12 @@ public class type_selector extends calculation implements ActionListener{
 		// TODO Auto-generated method stub
 		JComboBox box = (JComboBox)e.getSource();
 		String item = (String)box.getSelectedItem();	
-		
+		Tarif tarif = new Tarif();
 		switch (item) {
 		
 		case "Городской населенный пункт, одноставочный тариф":
 		{
-			calc.tar1 = 3.33f; calc.tar2 = 0; 
+			tarif.setTar1(3.33f);tarif.setTar2(0);
 			subversion.student.main_panel.remove(subversion.input_text2);
 			subversion.student.main_panel.remove(subversion.text2_label);
 			subversion.student.main_panel.add(subversion.input_text1);
@@ -27,7 +27,7 @@ public class type_selector extends calculation implements ActionListener{
 		break;
 		case "Городской населенный пункт, дифференцированный тариф":
 		{
-			calc.tar1 = 3.83f; calc.tar2 = 2.66f; 
+			tarif.setTar1(3.83f);tarif.setTar2(2.66f);
 			subversion.student.main_panel.add(subversion.input_text1);
 			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.add(subversion.input_text2);
@@ -38,7 +38,7 @@ public class type_selector extends calculation implements ActionListener{
 		break;
 		case "Сельское население, одноставочный тариф":
 		{
-			calc.tar1 = 2.33f; calc.tar2 = 0;
+			tarif.setTar1(2.33f);tarif.setTar2(0);
 			subversion.student.main_panel.remove(subversion.input_text2);
 			subversion.student.main_panel.remove(subversion.text2_label);
 			subversion.student.main_panel.add(subversion.input_text1);
@@ -49,7 +49,7 @@ public class type_selector extends calculation implements ActionListener{
 		break;
 		case "Сельское население, дифференцированный тариф":
 		{
-			calc.tar1 = 2.68f; calc.tar2 = 1.86f;
+			tarif.setTar1(2.68f);tarif.setTar2(1.86f);
 			subversion.student.main_panel.add(subversion.input_text1);
 			subversion.student.main_panel.add(subversion.text1_label);
 			subversion.student.main_panel.add(subversion.input_text2);
