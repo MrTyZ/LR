@@ -65,6 +65,11 @@ public class subversion {
 	input_text2 = new JTextField("");
 	input_text2.setBounds(75, 220, 130, 40);
 	
+	Image logo = new Image(); 
+	logo.setSize(180, 100);
+	logo.setLocation(50, 50);
+	main_panel.add(logo);
+	
 	JMenu menu = new JMenu("Главная");
 	JMenuBar menuBar = new JMenuBar();
 	JMenuItem menu1= new JMenuItem("Информация");
